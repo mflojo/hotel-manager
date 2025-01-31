@@ -1,6 +1,7 @@
 #ifndef HOTEL_H
 #define HOTEL_H
 #include <string>
+#include <iostream>
 using namespace std;
 
 class Hotel {
@@ -35,7 +36,7 @@ public:
         if (CheckAvailability(roomNumber)) {
             cout << "Room " << roomNumber << " is not currently booked..\n" << endl;
         } else {
-            rooms = rooms & ~(1 << (roomnumber - 1));
+            rooms = rooms & ~(1 << (roomNumber - 1));
             cout << "Checkout: success! Room " << roomNumber << " is available again.\n" << endl;
         }
     }
